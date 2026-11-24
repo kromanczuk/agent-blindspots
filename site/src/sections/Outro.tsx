@@ -57,6 +57,7 @@ export function Method() {
               <li>Planted and real mistakes come from different case sets, so the 100% vs 54% gap compares two test suites, not matched pairs.</li>
               <li>Modest samples: the intervals are wide, and only 12 confirmed faults took hold.</li>
               <li>Checker verdicts change about 1 in 10 between identical runs.</li>
+              <li>A model's written explanation may not be the real reason for its verdict, so the explanation counts are read alongside its behaviour.</li>
             </ul>
           </div>
           <div>

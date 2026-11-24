@@ -48,4 +48,4 @@ checked against the wrong action and are dropped by the analysis. See quirk 3 in
 
 ## `archive/`
 
-Outputs of the earlier three-agent pilot and smoke tests. Kept for the record; not part of the reported results.
+Outputs of the earlier three-agent pilot. Kept for the record; not part of the reported results.

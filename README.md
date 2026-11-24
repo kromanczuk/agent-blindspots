@@ -45,6 +45,9 @@ back exact item details and send high-risk changes to a human.
 - **Label quality without hand labels.** Real mistakes are labelled by two independent signals that must agree: an
   outcome filter and an adjudicator that sees the customer's secret goal. The filter alone was wrong for 34% of
   suspected mistakes.
+- **Explanations are evidence, not ground truth.** A model's stated reason need not be the reason it actually used
+  (Turpin et al., 2023). The explanation findings are therefore read alongside behaviour: the checker *says* it trusts
+  the customer's confirmation, and it *does* miss almost every mistake the chat gives no clue about (1 of 22).
 
 ## Quickstart
 
@@ -99,6 +102,7 @@ results/             the saved outputs of the final runs (see results/README.md)
 site/                the interactive explorer (React + Vite, deployed to GitHub Pages)
 tests/               unit tests and the reproduction check
 docs/                METHODS.md, the poster, figures
+THIRD_PARTY_NOTICES.md  τ²-bench licence (its conversations appear in results/ and the explorer)
 ```
 
 ## Design decisions
@@ -116,6 +120,54 @@ docs/                METHODS.md, the poster, figures
 - **Change one thing at a time.** Experiment 2b changes only the prompt, and reruns the original prompt alongside it, so
   run-to-run noise is measured rather than assumed.
 
+## Related work
+
+- **LLM-as-a-judge.** Using one LLM to grade another is now standard (Zheng et al., 2023), and judges favour their own
+  outputs (Panickssery et al., 2024). Here the checker and the adjudicator come from different model families, and the
+  question is not agreement with humans but whether the judge catches errors that matter.
+- **Guardrails.** Safety classifiers such as Llama Guard (Inan et al., 2023) screen content for policy categories.
+  Action checkers for agents face a harder problem: an action can be perfectly harmless in general and still wrong for
+  *this* customer.
+- **Agent benchmarks.** τ-bench (Yao et al., 2024) and τ²-bench (Barres et al., 2025) measure whether agents finish
+  tasks. This project reuses their recorded failures as a test set for the *checkers* that are meant to stop them.
+- **Explanations.** "Right for the right reasons" (Ross et al., 2017) asks whether a model is correct for the
+  intended cause, which is the idea behind checking whether a flag names the planted field. Explanations can also be
+  unfaithful (Turpin et al., 2023), which limits how far they can be trusted on their own.
+- **What's new here** is the comparison itself: the same checker scored on planted faults and on real agent mistakes
+  from the same benchmark, with real mistakes labelled automatically, and the checker's own explanations used to say
+  why the two scores differ.
+
+<details>
+<summary>References</summary>
+
+- Barres, V., Dong, H., Ray, S., Si, X., & Narasimhan, K. (2025). τ²-Bench: Evaluating conversational agents in a
+  dual-control environment. *ICML 2026*. arXiv:2506.07982.
+- Inan, H., et al. (2023). Llama Guard: LLM-based input-output safeguard for human-AI conversations. arXiv:2312.06674.
+- Panickssery, A., Bowman, S. R., & Feng, S. (2024). LLM evaluators recognize and favor their own generations.
+  *NeurIPS 2024*.
+- Ross, A. S., Hughes, M. C., & Doshi-Velez, F. (2017). Right for the right reasons: Training differentiable models by
+  constraining their explanations. *IJCAI 2017*.
+- Turpin, M., Michael, J., Perez, E., & Bowman, S. R. (2023). Language models don't always say what they think:
+  Unfaithful explanations in chain-of-thought prompting. *NeurIPS 2023*.
+- Yao, S., Shinn, N., Razavi, P., & Narasimhan, K. (2024). τ-bench: A benchmark for tool-agent-user interaction in
+  real-world domains. arXiv:2406.12045.
+- Zheng, L., et al. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. *NeurIPS 2023*.
+
+</details>
+
+## Responsible AI
+
+- **Who is harmed.** A missed mistake means a real customer gets the wrong refund, item or address, and usually only
+  finds out after the change has gone through. The customer said "yes", so the error is easy to blame on them.
+- **Over-trust.** A guardrail that scores 100% on planted tests invites deployment with less human oversight. The main
+  result is a warning against that: report checker performance on real failures, with intervals, before relying on it.
+- **Human oversight.** The recommendation is to keep humans in the loop for high-risk or irreversible changes, and to
+  make agents read back exact details so that the customer, not only the checker, can catch the error.
+- **Data and privacy.** All customers, orders and addresses are synthetic, from τ²-bench. No personal data was used,
+  and no humans were involved as subjects.
+- **Cost.** About 6,700 model calls, mostly to a small model; each experiment was run once, and every number can be
+  recomputed from the saved outputs without any further calls.
+
 ## Limitations
 
 - Customers are simulated (GPT-4.1); a simulated customer sometimes accepts a wrong change a real one wouldn't.
@@ -125,7 +177,8 @@ docs/                METHODS.md, the poster, figures
 - Planted and real mistakes come from different case sets, so 100% vs. 54% compares two test suites, not matched pairs.
 - Modest samples with wide intervals; only 12 conversation-level ("confirmed") faults took hold.
 - Checker verdicts change about 1 in 10 between identical runs (17 of 178).
-- The explanation analysis uses simple keyword rules and is approximate.
+- The explanation analysis uses simple keyword rules and is approximate, and stated explanations may not be faithful
+  to how the checker actually decided.
 
 Known quirks in the saved results, and how the analysis handles them, are listed in
 [docs/METHODS.md](docs/METHODS.md#known-quirks-in-the-saved-results).
@@ -134,7 +187,8 @@ Known quirks in the saved results, and how the analysis handles them, are listed
 
 - **Data:** [τ²-bench](https://github.com/sierra-research/tau2-bench) retail by Sierra Research (MIT licence), pinned to
   commit `768f3d8`. 114 tasks; 1,824 recorded conversations (Claude 3.7 Sonnet, GPT-4.1, GPT-4.1 mini, o4-mini × 4
-  trials). The benchmark isn't redistributed here; `make data` downloads it.
+  trials). The benchmark isn't bundled; `make data` downloads it. The saved results and the explorer's data include
+  conversations from it, used under its licence ([THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
 - **Models:** agents and checkers are Anthropic `claude-haiku-5-5`; the adjudicator and clue judge are OpenAI
   `gpt-6.2-sol`. About 6,700 model calls across the final runs, each experiment run once.
 - **API keys** (only to re-run): `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`; for Gemini on Vertex,
@@ -142,4 +196,10 @@ Known quirks in the saved results, and how the analysis handles them, are listed
 
 ## Citation
 
-See [CITATION.cff](CITATION.cff). Code is MIT-licensed ([LICENSE](LICENSE)).
+See [CITATION.cff](CITATION.cff). Code is MIT-licensed ([LICENSE](LICENSE)); τ²-bench data is © Sierra Research, MIT
+([THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
+
+## Use of AI tools
+
+AI coding assistants (Claude) helped with refactoring the experiment code into this package, building the website and
+editing the documentation. Every reported number is recomputed from the saved results by `make reproduce`.

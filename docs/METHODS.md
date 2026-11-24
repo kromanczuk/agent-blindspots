@@ -153,6 +153,9 @@ nothing is relabelled.
   `every_step` 93%, `no_source` 67% (of runs it caught).
 - **Clue / no clue** (Experiment 2b): the checker's catch rate split by whether the mistake was detectable from the
   chat at all.
+- **Faithfulness.** Stated explanations need not reflect how a model actually decided (Turpin et al., 2023), so the
+  keyword counts are treated as what the checker *claims*. They are interpreted together with behaviour that doesn't
+  depend on the explanations: the clue split, and the skeptical prompt failing to change the catch rate.
 
 ## 6. Statistics
 
