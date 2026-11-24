@@ -33,7 +33,7 @@ show why: it treats the customer's "yes" as proof that the action is right.
 planted-mistake scores, and measure checkers on real failures instead; and look beyond the checker: make agents read
 back exact item details and send high-risk changes to a human.
 
-## Why this is an explainable-AI project
+## Explainability in this project
 
 - **Explanations as evidence.** Every checker verdict comes with a written justification. Reading the misses, rather
   than only counting them, is what reveals the failure mode: the checker approves whatever the customer agreed to.
