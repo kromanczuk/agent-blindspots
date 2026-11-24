@@ -1,0 +1,887 @@
+{
+  "headline": {
+    "planted_caught": {
+      "k": 306,
+      "n": 306,
+      "pct": 100.0,
+      "lo": 98.8,
+      "hi": 100.0
+    },
+    "real_caught": {
+      "k": 43,
+      "n": 79,
+      "pct": 54.4,
+      "lo": 43.5,
+      "hi": 65.0
+    }
+  },
+  "lab": {
+    "cases": 58,
+    "clean": {
+      "correct": 54,
+      "wrong_change_written": 0,
+      "stopped_by_agents": 4
+    },
+    "handoff_faults": {
+      "applied": 393,
+      "reached_end": 306,
+      "stopped_by_agents": 87,
+      "skipped_not_applicable": 129,
+      "by_level": {
+        "easy": {
+          "applied": 174,
+          "reached_end": 102
+        },
+        "medium": {
+          "applied": 84,
+          "reached_end": 80
+        },
+        "hard": {
+          "applied": 135,
+          "reached_end": 124
+        }
+      },
+      "by_position": {
+        "1": {
+          "applied": 131,
+          "reached_end": 66
+        },
+        "2": {
+          "applied": 131,
+          "reached_end": 118
+        },
+        "4": {
+          "applied": 131,
+          "reached_end": 122
+        }
+      }
+    },
+    "confirmed_faults": {
+      "planted": 50,
+      "took_hold": 12,
+      "reached_end": 12
+    },
+    "configs": {
+      "none": {
+        "llm_calls": 0,
+        "caught": {
+          "k": 0,
+          "n": 306,
+          "pct": 0.0,
+          "lo": 0.0,
+          "hi": 1.2
+        },
+        "confirmed_caught": {
+          "k": 0,
+          "n": 12,
+          "pct": 0.0,
+          "lo": 0.0,
+          "hi": 24.3
+        },
+        "false_alarms": {
+          "k": 0,
+          "n": 54,
+          "pct": 0.0,
+          "lo": 0.0,
+          "hi": 6.6
+        },
+        "false_alarms_adjusted": {
+          "k": 0,
+          "n": 54,
+          "pct": 0.0,
+          "lo": 0.0,
+          "hi": 6.6
+        },
+        "right_step": null,
+        "right_reason": {
+          "k": 0,
+          "n": 0,
+          "pct": null,
+          "lo": null,
+          "hi": null
+        },
+        "cost_per_1000_runs": 0.0,
+        "delay_seconds": 0.0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "by_position": {
+          "1": {
+            "k": 0,
+            "n": 66,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 5.5
+          },
+          "2": {
+            "k": 0,
+            "n": 118,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 3.2
+          },
+          "4": {
+            "k": 0,
+            "n": 122,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 3.1
+          }
+        },
+        "by_level": {
+          "easy": {
+            "k": 0,
+            "n": 102,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 3.6
+          },
+          "medium": {
+            "k": 0,
+            "n": 80,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 4.6
+          },
+          "hard": {
+            "k": 0,
+            "n": 124,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 3.0
+          }
+        }
+      },
+      "end_only": {
+        "llm_calls": 1,
+        "caught": {
+          "k": 306,
+          "n": 306,
+          "pct": 100.0,
+          "lo": 98.8,
+          "hi": 100.0
+        },
+        "confirmed_caught": {
+          "k": 12,
+          "n": 12,
+          "pct": 100.0,
+          "lo": 75.7,
+          "hi": 100.0
+        },
+        "false_alarms": {
+          "k": 4,
+          "n": 54,
+          "pct": 7.4,
+          "lo": 2.9,
+          "hi": 17.6
+        },
+        "false_alarms_adjusted": {
+          "k": 4,
+          "n": 54,
+          "pct": 7.4,
+          "lo": 2.9,
+          "hi": 17.6
+        },
+        "right_step": null,
+        "right_reason": {
+          "k": 318,
+          "n": 318,
+          "pct": 100.0,
+          "lo": 98.8,
+          "hi": 100.0
+        },
+        "cost_per_1000_runs": 0.86,
+        "delay_seconds": 4.9,
+        "tokens_in": 4245,
+        "tokens_out": 873,
+        "by_position": {
+          "1": {
+            "k": 66,
+            "n": 66,
+            "pct": 100.0,
+            "lo": 94.5,
+            "hi": 100.0
+          },
+          "2": {
+            "k": 118,
+            "n": 118,
+            "pct": 100.0,
+            "lo": 96.8,
+            "hi": 100.0
+          },
+          "4": {
+            "k": 122,
+            "n": 122,
+            "pct": 100.0,
+            "lo": 96.9,
+            "hi": 100.0
+          }
+        },
+        "by_level": {
+          "easy": {
+            "k": 102,
+            "n": 102,
+            "pct": 100.0,
+            "lo": 96.4,
+            "hi": 100.0
+          },
+          "medium": {
+            "k": 80,
+            "n": 80,
+            "pct": 100.0,
+            "lo": 95.4,
+            "hi": 100.0
+          },
+          "hard": {
+            "k": 124,
+            "n": 124,
+            "pct": 100.0,
+            "lo": 97.0,
+            "hi": 100.0
+          }
+        }
+      },
+      "code_only": {
+        "llm_calls": 0,
+        "caught": {
+          "k": 102,
+          "n": 306,
+          "pct": 33.3,
+          "lo": 28.3,
+          "hi": 38.8
+        },
+        "confirmed_caught": {
+          "k": 0,
+          "n": 12,
+          "pct": 0.0,
+          "lo": 0.0,
+          "hi": 24.3
+        },
+        "false_alarms": {
+          "k": 0,
+          "n": 54,
+          "pct": 0.0,
+          "lo": 0.0,
+          "hi": 6.6
+        },
+        "false_alarms_adjusted": {
+          "k": 0,
+          "n": 54,
+          "pct": 0.0,
+          "lo": 0.0,
+          "hi": 6.6
+        },
+        "right_step": {
+          "k": 102,
+          "n": 102,
+          "pct": 100.0,
+          "lo": 96.4,
+          "hi": 100.0
+        },
+        "right_reason": {
+          "k": 102,
+          "n": 102,
+          "pct": 100.0,
+          "lo": 96.4,
+          "hi": 100.0
+        },
+        "cost_per_1000_runs": 0.0,
+        "delay_seconds": 0.0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "by_position": {
+          "1": {
+            "k": 0,
+            "n": 66,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 5.5
+          },
+          "2": {
+            "k": 49,
+            "n": 118,
+            "pct": 41.5,
+            "lo": 33.0,
+            "hi": 50.5
+          },
+          "4": {
+            "k": 53,
+            "n": 122,
+            "pct": 43.4,
+            "lo": 35.0,
+            "hi": 52.3
+          }
+        },
+        "by_level": {
+          "easy": {
+            "k": 102,
+            "n": 102,
+            "pct": 100.0,
+            "lo": 96.4,
+            "hi": 100.0
+          },
+          "medium": {
+            "k": 0,
+            "n": 80,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 4.6
+          },
+          "hard": {
+            "k": 0,
+            "n": 124,
+            "pct": 0.0,
+            "lo": 0.0,
+            "hi": 3.0
+          }
+        }
+      },
+      "every_step": {
+        "llm_calls": 5,
+        "caught": {
+          "k": 306,
+          "n": 306,
+          "pct": 100.0,
+          "lo": 98.8,
+          "hi": 100.0
+        },
+        "confirmed_caught": {
+          "k": 12,
+          "n": 12,
+          "pct": 100.0,
+          "lo": 75.7,
+          "hi": 100.0
+        },
+        "false_alarms": {
+          "k": 26,
+          "n": 54,
+          "pct": 48.1,
+          "lo": 35.4,
+          "hi": 61.1
+        },
+        "false_alarms_adjusted": {
+          "k": 11,
+          "n": 54,
+          "pct": 20.4,
+          "lo": 11.8,
+          "hi": 32.9
+        },
+        "right_step": {
+          "k": 295,
+          "n": 318,
+          "pct": 92.8,
+          "lo": 89.4,
+          "hi": 95.1
+        },
+        "right_reason": {
+          "k": 297,
+          "n": 318,
+          "pct": 93.4,
+          "lo": 90.1,
+          "hi": 95.6
+        },
+        "cost_per_1000_runs": 4.18,
+        "delay_seconds": 20.2,
+        "tokens_in": 21570,
+        "tokens_out": 4045,
+        "by_position": {
+          "1": {
+            "k": 66,
+            "n": 66,
+            "pct": 100.0,
+            "lo": 94.5,
+            "hi": 100.0
+          },
+          "2": {
+            "k": 118,
+            "n": 118,
+            "pct": 100.0,
+            "lo": 96.8,
+            "hi": 100.0
+          },
+          "4": {
+            "k": 122,
+            "n": 122,
+            "pct": 100.0,
+            "lo": 96.9,
+            "hi": 100.0
+          }
+        },
+        "by_level": {
+          "easy": {
+            "k": 102,
+            "n": 102,
+            "pct": 100.0,
+            "lo": 96.4,
+            "hi": 100.0
+          },
+          "medium": {
+            "k": 80,
+            "n": 80,
+            "pct": 100.0,
+            "lo": 95.4,
+            "hi": 100.0
+          },
+          "hard": {
+            "k": 124,
+            "n": 124,
+            "pct": 100.0,
+            "lo": 97.0,
+            "hi": 100.0
+          }
+        }
+      },
+      "no_source": {
+        "llm_calls": 5,
+        "caught": {
+          "k": 283,
+          "n": 306,
+          "pct": 92.5,
+          "lo": 89.0,
+          "hi": 94.9
+        },
+        "confirmed_caught": {
+          "k": 8,
+          "n": 12,
+          "pct": 66.7,
+          "lo": 39.1,
+          "hi": 86.2
+        },
+        "false_alarms": {
+          "k": 28,
+          "n": 54,
+          "pct": 51.9,
+          "lo": 38.9,
+          "hi": 64.6
+        },
+        "false_alarms_adjusted": {
+          "k": 28,
+          "n": 54,
+          "pct": 51.9,
+          "lo": 38.9,
+          "hi": 64.6
+        },
+        "right_step": {
+          "k": 210,
+          "n": 291,
+          "pct": 72.2,
+          "lo": 66.8,
+          "hi": 77.0
+        },
+        "right_reason": {
+          "k": 194,
+          "n": 291,
+          "pct": 66.7,
+          "lo": 61.1,
+          "hi": 71.8
+        },
+        "cost_per_1000_runs": 3.7,
+        "delay_seconds": 23.1,
+        "tokens_in": 14189,
+        "tokens_out": 4557,
+        "by_position": {
+          "1": {
+            "k": 53,
+            "n": 66,
+            "pct": 80.3,
+            "lo": 69.2,
+            "hi": 88.1
+          },
+          "2": {
+            "k": 109,
+            "n": 118,
+            "pct": 92.4,
+            "lo": 86.1,
+            "hi": 95.9
+          },
+          "4": {
+            "k": 121,
+            "n": 122,
+            "pct": 99.2,
+            "lo": 95.5,
+            "hi": 99.9
+          }
+        },
+        "by_level": {
+          "easy": {
+            "k": 102,
+            "n": 102,
+            "pct": 100.0,
+            "lo": 96.4,
+            "hi": 100.0
+          },
+          "medium": {
+            "k": 73,
+            "n": 80,
+            "pct": 91.2,
+            "lo": 83.0,
+            "hi": 95.7
+          },
+          "hard": {
+            "k": 108,
+            "n": 124,
+            "pct": 87.1,
+            "lo": 80.1,
+            "hi": 91.9
+          }
+        }
+      },
+      "lightweight": {
+        "llm_calls": 1,
+        "caught": {
+          "k": 306,
+          "n": 306,
+          "pct": 100.0,
+          "lo": 98.8,
+          "hi": 100.0
+        },
+        "confirmed_caught": {
+          "k": 12,
+          "n": 12,
+          "pct": 100.0,
+          "lo": 75.7,
+          "hi": 100.0
+        },
+        "false_alarms": {
+          "k": 4,
+          "n": 54,
+          "pct": 7.4,
+          "lo": 2.9,
+          "hi": 17.6
+        },
+        "false_alarms_adjusted": {
+          "k": 4,
+          "n": 54,
+          "pct": 7.4,
+          "lo": 2.9,
+          "hi": 17.6
+        },
+        "right_step": {
+          "k": 102,
+          "n": 318,
+          "pct": 32.1,
+          "lo": 27.2,
+          "hi": 37.4
+        },
+        "right_reason": {
+          "k": 318,
+          "n": 318,
+          "pct": 100.0,
+          "lo": 98.8,
+          "hi": 100.0
+        },
+        "cost_per_1000_runs": 0.86,
+        "delay_seconds": 4.9,
+        "tokens_in": 4245,
+        "tokens_out": 873,
+        "by_position": {
+          "1": {
+            "k": 66,
+            "n": 66,
+            "pct": 100.0,
+            "lo": 94.5,
+            "hi": 100.0
+          },
+          "2": {
+            "k": 118,
+            "n": 118,
+            "pct": 100.0,
+            "lo": 96.8,
+            "hi": 100.0
+          },
+          "4": {
+            "k": 122,
+            "n": 122,
+            "pct": 100.0,
+            "lo": 96.9,
+            "hi": 100.0
+          }
+        },
+        "by_level": {
+          "easy": {
+            "k": 102,
+            "n": 102,
+            "pct": 100.0,
+            "lo": 96.4,
+            "hi": 100.0
+          },
+          "medium": {
+            "k": 80,
+            "n": 80,
+            "pct": 100.0,
+            "lo": 95.4,
+            "hi": 100.0
+          },
+          "hard": {
+            "k": 124,
+            "n": 124,
+            "pct": 100.0,
+            "lo": 97.0,
+            "hi": 100.0
+          }
+        }
+      }
+    }
+  },
+  "wild": {
+    "candidates": {
+      "mistake": 120,
+      "correct": 120
+    },
+    "labels": {
+      "mistake->mistake": 79,
+      "mistake->acceptable": 41,
+      "correct->acceptable": 119,
+      "correct->mistake": 1
+    },
+    "kept": {
+      "mistakes": 79,
+      "correct": 119
+    },
+    "filter_overturned": {
+      "k": 41,
+      "n": 120,
+      "pct": 34.2,
+      "lo": 26.3,
+      "hi": 43.0
+    },
+    "full": {
+      "caught": {
+        "k": 43,
+        "n": 79,
+        "pct": 54.4,
+        "lo": 43.5,
+        "hi": 65.0
+      },
+      "false_alarms": {
+        "k": 13,
+        "n": 119,
+        "pct": 10.9,
+        "lo": 6.5,
+        "hi": 17.8
+      }
+    },
+    "records": {
+      "caught": {
+        "k": 19,
+        "n": 79,
+        "pct": 24.1,
+        "lo": 16.0,
+        "hi": 34.5
+      },
+      "false_alarms": {
+        "k": 21,
+        "n": 119,
+        "pct": 17.6,
+        "lo": 11.8,
+        "hi": 25.5
+      }
+    },
+    "caught_by_action": {
+      "cancel_pending_order": {
+        "k": 17,
+        "n": 19,
+        "pct": 89.5,
+        "lo": 68.6,
+        "hi": 97.1
+      },
+      "exchange_delivered_order_items": {
+        "k": 8,
+        "n": 16,
+        "pct": 50.0,
+        "lo": 28.0,
+        "hi": 72.0
+      },
+      "modify_pending_order_address": {
+        "k": 1,
+        "n": 9,
+        "pct": 11.1,
+        "lo": 2.0,
+        "hi": 43.5
+      },
+      "modify_pending_order_items": {
+        "k": 11,
+        "n": 21,
+        "pct": 52.4,
+        "lo": 32.4,
+        "hi": 71.7
+      },
+      "modify_pending_order_payment": {
+        "k": 0,
+        "n": 1,
+        "pct": 0.0,
+        "lo": 0.0,
+        "hi": 79.3
+      },
+      "modify_user_address": {
+        "k": 2,
+        "n": 3,
+        "pct": 66.7,
+        "lo": 20.8,
+        "hi": 93.9
+      },
+      "return_delivered_order_items": {
+        "k": 4,
+        "n": 10,
+        "pct": 40.0,
+        "lo": 16.8,
+        "hi": 68.7
+      }
+    },
+    "caught_by_agent": {
+      "claude-3-7-sonnet-20250219": {
+        "k": 7,
+        "n": 19,
+        "pct": 36.8,
+        "lo": 19.1,
+        "hi": 59.0
+      },
+      "gpt-4.1-2025-04-14": {
+        "k": 17,
+        "n": 25,
+        "pct": 68.0,
+        "lo": 48.4,
+        "hi": 82.8
+      },
+      "gpt-4.1-mini-2025-04-14": {
+        "k": 13,
+        "n": 20,
+        "pct": 65.0,
+        "lo": 43.3,
+        "hi": 81.9
+      },
+      "o4-mini-2025-04-16": {
+        "k": 6,
+        "n": 15,
+        "pct": 40.0,
+        "lo": 19.8,
+        "hi": 64.3
+      }
+    },
+    "explanations": {
+      "missed": 36,
+      "missed_cites_request": 33,
+      "missed_cites_confirmation": 25,
+      "caught": 43,
+      "caught_cites_confirmation": 24
+    }
+  },
+  "skeptic": {
+    "rows": 197,
+    "usable": 178,
+    "dropped_wrong_action": 19,
+    "mistakes": 73,
+    "correct": 105,
+    "caught": {
+      "original": {
+        "k": 39,
+        "n": 73,
+        "pct": 53.4,
+        "lo": 42.1,
+        "hi": 64.4
+      },
+      "baseline": {
+        "k": 39,
+        "n": 73,
+        "pct": 53.4,
+        "lo": 42.1,
+        "hi": 64.4
+      },
+      "skeptic": {
+        "k": 39,
+        "n": 73,
+        "pct": 53.4,
+        "lo": 42.1,
+        "hi": 64.4
+      }
+    },
+    "false_alarms": {
+      "original": {
+        "k": 10,
+        "n": 105,
+        "pct": 9.5,
+        "lo": 5.3,
+        "hi": 16.6
+      },
+      "baseline": {
+        "k": 7,
+        "n": 105,
+        "pct": 6.7,
+        "lo": 3.3,
+        "hi": 13.1
+      },
+      "skeptic": {
+        "k": 4,
+        "n": 105,
+        "pct": 3.8,
+        "lo": 1.5,
+        "hi": 9.4
+      }
+    },
+    "skeptic_vs_baseline": {
+      "mistakes": {
+        "only_a": 4,
+        "only_b": 4,
+        "p_value": 1.0
+      },
+      "correct": {
+        "only_a": 3,
+        "only_b": 6,
+        "p_value": 0.5078
+      }
+    },
+    "run_to_run_flips": 17,
+    "clue_in_chat": {
+      "k": 51,
+      "n": 73,
+      "pct": 69.9,
+      "lo": 58.6,
+      "hi": 79.2
+    },
+    "caught_with_clue": {
+      "original": {
+        "k": 38,
+        "n": 51,
+        "pct": 74.5,
+        "lo": 61.1,
+        "hi": 84.5
+      },
+      "baseline": {
+        "k": 35,
+        "n": 51,
+        "pct": 68.6,
+        "lo": 55.0,
+        "hi": 79.7
+      },
+      "skeptic": {
+        "k": 37,
+        "n": 51,
+        "pct": 72.5,
+        "lo": 59.1,
+        "hi": 82.9
+      }
+    },
+    "caught_without_clue": {
+      "original": {
+        "k": 1,
+        "n": 22,
+        "pct": 4.5,
+        "lo": 0.8,
+        "hi": 21.8
+      },
+      "baseline": {
+        "k": 4,
+        "n": 22,
+        "pct": 18.2,
+        "lo": 7.3,
+        "hi": 38.5
+      },
+      "skeptic": {
+        "k": 2,
+        "n": 22,
+        "pct": 9.1,
+        "lo": 2.5,
+        "hi": 27.8
+      }
+    }
+  }
+}

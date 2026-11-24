@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+
+# Benchmark data (~700 MB): fetch with `make data`
+data/tau2-bench/
+
+# Secrets
+.env
+
+# Run artefacts
+*.progress.jsonl
+*_dryrun.*
+results/dry-run/
+
+# Site
+site/node_modules/
+site/dist/
+
+.DS_Store
+.claude/
+*.tsbuildinfo

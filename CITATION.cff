@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Perfect in the lab, 54% in the wild: do AI checkers catch the mistakes AI agents actually make?"
+authors:
+  - family-names: Romanczuk
+    given-names: Kuba
+    affiliation: Duke University
+type: software
+license: MIT
+repository-code: "https://github.com/kromanczuk/agent-blindspots"
+date-released: 2026-11-23
+keywords: [explainable AI, AI agents, guardrails, LLM-as-a-judge, evaluation, tau2-bench]
