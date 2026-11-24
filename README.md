@@ -15,7 +15,6 @@ show why: it treats the customer's "yes" as proof that the action is right.
 **[Interactive explorer](https://kromanczuk.github.io/agent-blindspots/)** · **[Poster (PDF)](docs/poster.pdf)** ·
 **[Methods](docs/METHODS.md)**
 
-*Kuba Romanczuk · Emerging Trends in Explainable AI · Duke University (MEng final project), 2026*
 
 ---
 
@@ -198,8 +197,3 @@ Known quirks in the saved results, and how the analysis handles them, are listed
 
 See [CITATION.cff](CITATION.cff). Code is MIT-licensed ([LICENSE](LICENSE)); τ²-bench data is © Sierra Research, MIT
 ([THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
-
-## Use of AI tools
-
-AI coding assistants (Claude) helped with refactoring the experiment code into this package, building the website and
-editing the documentation. Every reported number is recomputed from the saved results by `make reproduce`.
